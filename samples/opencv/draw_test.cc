@@ -2,6 +2,9 @@
 #include <opencv4/opencv2/core/core.hpp>
 #include "opencv4/opencv2/highgui/highgui.hpp"
 #include <opencv4/opencv2/imgproc/imgproc.hpp>
+#include <unistd.h>
+#include <iostream>
+using namespace std;
 using namespace cv;
  
 //宏定义部分
@@ -19,7 +22,7 @@ void drawRegtangle(Mat image)
     //waitKey();
 }
 
-void drawonmat(Mat color_mat, float cur_depth, Rect bbox, bool has_target)
+void drawonmat(Mat& color_mat, float cur_depth, Rect bbox, bool has_target)
 {
 
     // {
@@ -36,8 +39,8 @@ void drawonmat(Mat color_mat, float cur_depth, Rect bbox, bool has_target)
 
     Point2d mid(int(color_mat.cols/2),int(color_mat.rows/2));
     // cout<<(color_mat.rows/2)<<endl;
-    line(color_mat, Point(mid.x-50,mid.y), Point(mid.x+50,mid.y), Scalar(255,255,0), 2);
-    line(color_mat, Point(mid.x,mid.y-50), Point(mid.x,mid.y+50), Scalar(255,255,0), 2);
+    line(color_mat, Point(mid.x-50, mid.y), Point(mid.x+50,mid.y), Scalar(255,255,0), 2);
+    line(color_mat, Point(mid.x, mid.y-50), Point(mid.x,mid.y+50), Scalar(255,255,0), 2);
     rectangle(color_mat,
               Rect(int(mid.x - color_mat.rows/4 - color_mat.rows/20), 
               int(mid.y - color_mat.cols/4),
@@ -74,20 +77,28 @@ void showVideo1()
 
 int showVideo2()
 {
-    VideoCapture cap("../doc/chenyuanliang.mp4"); 
+    VideoCapture cap("../doc/out.mp4"); 
     if(!cap.isOpened()) 
     { 
         return -1; 
     } 
     Mat frame;  
+    Rect rect(20,20,100,100);
     while(1) 
     { 
         cap>>frame; 
         //drawRegtangle(frame);
+        drawonmat(frame, 0, rect, true);
         if(frame.empty()) break;
+        std::cout << "width: "  << frame.size().width
+                << "  height:  " << frame.size().height 
+                << endl;
         imshow("当前视频",frame); 
+        imwrite("1.png", frame);
         if(waitKey(1) >=1) 
             break;
+        usleep(50*1000);
+        //sleep(1);
     } 
     return 0;
 }
