@@ -55,7 +55,7 @@ void drawonmat(Mat& color_mat, float cur_depth, Rect bbox, bool has_target)
     if(has_target)
     {
         putText(color_mat, "YES target", Point(mid.x-100, 50),
-                    FONT_HERSHEY_SIMPLEX, 2.0, Scalar(0, 255, 255));
+                    FONT_HERSHEY_SIMPLEX, 2.0, cv::Scalar{ 80, 0.5, 0.1, 0 });
 
     }
     else
