@@ -6,7 +6,7 @@
 #include <vector>
 #include "opencv2/opencv.hpp"
 #include "time.h"
-#include "puttext.h"
+#include "chinese/puttext.h"
 
 static int ToWchar(char* &src, wchar_t* &dest, const char *locale = "zh_CN.utf8")
 {
