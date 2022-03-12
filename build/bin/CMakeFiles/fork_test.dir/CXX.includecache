@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zz/code/demo/samples/fork/fork_test.cc
+stdio.h
+-
+unistd.h
+-
+signal.h
+-
+errno.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+string.h
+-
+

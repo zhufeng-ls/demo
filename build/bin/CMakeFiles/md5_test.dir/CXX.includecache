@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zz/code/demo/samples/check/md5/md5.hpp
+stddef.h
+-
+string
+-
+cstring
+-
+
+/home/zz/code/demo/samples/check/md5/md5_test.cc
+md5.hpp
+/home/zz/code/demo/samples/check/md5/md5.hpp
+
