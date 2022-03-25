@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fork_test.dir/fork/fork_test.cc.o"
-  "fork_test"
   "fork_test.pdb"
+  "fork_test"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zz/code/demo/samples/opencv/chinese/puttext.cc
+/home/jim/code/demo/samples/opencv/chinese/puttext.cc
 wchar.h
 -
 assert.h
@@ -18,15 +18,15 @@ ctype.h
 cmath
 -
 puttext.h
-/home/zz/code/demo/samples/opencv/chinese/puttext.h
+/home/jim/code/demo/samples/opencv/chinese/puttext.h
 
-/home/zz/code/demo/samples/opencv/chinese/puttext.h
+/home/jim/code/demo/samples/opencv/chinese/puttext.h
 ft2build.h
 -
 opencv2/opencv.hpp
 -
 
-/home/zz/code/demo/samples/opencv/chinese_test.cc
+/home/jim/code/demo/samples/opencv/chinese_test.cc
 iostream
 -
 fstream
@@ -38,17 +38,21 @@ string
 vector
 -
 opencv2/opencv.hpp
-/home/zz/code/demo/samples/opencv/opencv2/opencv.hpp
+/home/jim/code/demo/samples/opencv/opencv2/opencv.hpp
 time.h
-/home/zz/code/demo/samples/opencv/time.h
+/home/jim/code/demo/samples/opencv/time.h
 chinese/puttext.h
-/home/zz/code/demo/samples/opencv/chinese/puttext.h
+/home/jim/code/demo/samples/opencv/chinese/puttext.h
 
 /usr/include/freetype2/freetype/config/ftheader.h
 
 /usr/include/freetype2/ft2build.h
 freetype/config/ftheader.h
 -
+
+/usr/local/include/opencv4/opencv2/./imgproc/segmentation.hpp
+opencv2/imgproc.hpp
+/usr/local/include/opencv4/opencv2/./imgproc/opencv2/imgproc.hpp
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
@@ -170,8 +174,6 @@ Intrin.h
 arm_neon.h
 -
 arm_neon.h
--
-riscv-vector.h
 -
 arm_neon.h
 -
@@ -595,8 +597,6 @@ algorithm
 -
 vector
 -
-unordered_map
--
 
 /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h
 algorithm
@@ -868,11 +868,7 @@ opencv2/core.hpp
 opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp
 ./imgproc/segmentation.hpp
-/usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
-
-/usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
-opencv2/imgproc.hpp
-/usr/local/include/opencv4/opencv2/imgproc/opencv2/imgproc.hpp
+/usr/local/include/opencv4/opencv2/./imgproc/segmentation.hpp
 
 /usr/local/include/opencv4/opencv2/ml.hpp
 opencv2/core.hpp
@@ -893,17 +889,11 @@ opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp
 opencv2/objdetect/detection_based_tracker.hpp
 /usr/local/include/opencv4/opencv2/opencv2/objdetect/detection_based_tracker.hpp
-opencv2/objdetect/face.hpp
-/usr/local/include/opencv4/opencv2/opencv2/objdetect/face.hpp
 
 /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp
 opencv2/core.hpp
 -
 vector
--
-
-/usr/local/include/opencv4/opencv2/objdetect/face.hpp
-opencv2/core.hpp
 -
 
 /usr/local/include/opencv4/opencv2/opencv.hpp

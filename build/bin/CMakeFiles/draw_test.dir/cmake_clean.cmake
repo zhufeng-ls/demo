@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/draw_test.dir/opencv/draw_test.cc.o"
-  "draw_test"
   "draw_test.pdb"
+  "draw_test"
 )
 
 # Per-language clean rules from dependency scanning.

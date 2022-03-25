@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zz/code/demo/samples/opencv/chinese/puttext.cc" "/home/zz/code/demo/build/bin/CMakeFiles/chinese_test.dir/opencv/chinese/puttext.cc.o"
-  "/home/zz/code/demo/samples/opencv/chinese_test.cc" "/home/zz/code/demo/build/bin/CMakeFiles/chinese_test.dir/opencv/chinese_test.cc.o"
+  "/home/jim/code/demo/samples/opencv/chinese/puttext.cc" "/home/jim/code/demo/build/bin/CMakeFiles/chinese_test.dir/opencv/chinese/puttext.cc.o"
+  "/home/jim/code/demo/samples/opencv/chinese_test.cc" "/home/jim/code/demo/build/bin/CMakeFiles/chinese_test.dir/opencv/chinese_test.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

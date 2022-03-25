@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zz/code/demo/samples/grammer/string/string_c_str_test.cc
+/home/jim/code/demo/samples/grammer/string/string_c_str_test.cc
 string
 -
 iostream

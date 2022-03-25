@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/zz/code/demo/samples/opencv/draw_test.cc
+/home/jim/code/demo/samples/opencv/draw_test.cc
 opencv4/opencv2/core/core.hpp
 -
 opencv4/opencv2/highgui/highgui.hpp
-/home/zz/code/demo/samples/opencv/opencv4/opencv2/highgui/highgui.hpp
+/home/jim/code/demo/samples/opencv/opencv4/opencv2/highgui/highgui.hpp
 opencv4/opencv2/imgproc/imgproc.hpp
 -
 unistd.h

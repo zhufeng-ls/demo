@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/queue_test.dir/stl/queue_test.cc.o"
-  "queue_test"
   "queue_test.pdb"
+  "queue_test"
 )
 
 # Per-language clean rules from dependency scanning.

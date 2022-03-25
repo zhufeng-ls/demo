@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/md5_test.dir/check/md5/md5_test.cc.o"
-  "md5_test"
   "md5_test.pdb"
+  "md5_test"
 )
 
 # Per-language clean rules from dependency scanning.

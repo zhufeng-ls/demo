@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zz/code/demo/samples/opencv/draw_background.cc
+/home/jim/code/demo/samples/opencv/draw_background.cc
 opencv2/highgui/highgui.hpp
 -
 opencv2/core/core.hpp
@@ -17,6 +17,10 @@ iostream
 -
 unistd.h
 -
+
+/usr/local/include/opencv4/opencv2/./imgproc/segmentation.hpp
+opencv2/imgproc.hpp
+/usr/local/include/opencv4/opencv2/./imgproc/opencv2/imgproc.hpp
 
 /usr/local/include/opencv4/opencv2/core.hpp
 opencv2/core/cvdef.h
@@ -108,8 +112,6 @@ Intrin.h
 arm_neon.h
 -
 arm_neon.h
--
-riscv-vector.h
 -
 arm_neon.h
 -
@@ -360,13 +362,9 @@ opencv2/core.hpp
 opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp
 ./imgproc/segmentation.hpp
-/usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+/usr/local/include/opencv4/opencv2/./imgproc/segmentation.hpp
 
 /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
-opencv2/imgproc.hpp
-/usr/local/include/opencv4/opencv2/imgproc/opencv2/imgproc.hpp
-
-/usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
 opencv2/imgproc.hpp
 /usr/local/include/opencv4/opencv2/imgproc/opencv2/imgproc.hpp
 

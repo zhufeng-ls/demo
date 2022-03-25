@@ -1,4 +1,4 @@
-# Install script for directory: /home/zz/code/demo/samples
+# Install script for directory: /home/jim/code/demo/samples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

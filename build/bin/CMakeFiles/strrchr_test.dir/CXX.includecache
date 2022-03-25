@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zz/code/demo/samples/grammer/char/strrchr_test.cc
+/home/jim/code/demo/samples/grammer/char/strrchr_test.cc
 stdlib.h
 -
 string.h

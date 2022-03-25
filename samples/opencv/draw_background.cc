@@ -10,28 +10,71 @@ using namespace cv;
 void test1()
 {
    // namedWindow("利用ROI实现图像叠加");
-    auto img1 = imread("/home/jim/code/demo/build/ubt.png");
-    if (!img1.data)
+    auto logo = imread("/home/jim/code/demo/build/outer_frame.png");
+    if (!logo.data)
     {
-        cout << "read image img1 error!" << endl;
+        cout << "read image logo error!" << endl;
         return;
     }
-    auto img2 = imread("/home/jim/code/demo/build/datouzhao_1.png");
-    if (!img2.data)
+    auto img1 = imread("/home/jim/code/demo/datouzhao_1.png");
+    if (!img1.data)
     {
         cout << "read image img2 error!" << endl;
         return;
     }
 
-    imshow("ubt", img1);
-    imshow("women", img2);
-    
-    Mat out;
-    out = img2(cv::Rect(450,360,img1.cols,img1.rows));
-    imshow("Hello", out);
+    cv::Mat mask = cv::imread("/home/jim/code/demo/build/outer_frame.png",0);
 
+    imshow("ubt", logo);
+    // imshow("women", img1);
+    
+    Mat imageROI;
+    imageROI = img1(cv::Rect(0,360,logo.cols,logo.rows)); //450
+    logo.copyTo(imageROI, mask);
+    imshow("Hello", img1);
     waitKey(0);
     return;
+}
+
+void test2()
+{
+   // namedWindow("利用ROI实现图像叠加");
+    auto logo = imread("/home/jim/code/demo/build/outer_frame.png");
+    if (!logo.data)
+    {
+        cout << "read image logo error!" << endl;
+        return;
+    }
+    auto img1 = imread("/home/jim/code/demo/datouzhao_1.png");
+    if (!img1.data)
+    {
+        cout << "read image img2 error!" << endl;
+        return;
+    }
+
+    cv::Mat mask = cv::imread("/home/jim/code/demo/build/outer_frame.png",0);
+
+    imshow("ubt", logo);
+    // imshow("women", img1);
+    
+    Mat imageROI;
+    imageROI = img1(cv::Rect(0,360,logo.cols,logo.rows)); //450
+    cv::addWeighted(imageROI, 1.0, logo, 0.6, 0, imageROI);
+    imshow("Hello", img1);
+    waitKey(0);
+    return;
+}
+
+void test3()
+{
+    auto logo = imread("/home/jim/code/demo/build/outer_frame.png");
+    if (!logo.data)
+    {
+        cout << "read image logo error!" << endl;
+        return;
+    }
+    imshow("ubt", logo);
+    waitKey(0);
 }
 
 int main()
