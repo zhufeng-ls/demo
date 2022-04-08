@@ -18,4 +18,6 @@ add_executable(md5_test check/md5/md5_test.cc)
 add_executable(fork_test fork/fork_test.cc)
 
 add_executable(queue_test stl/queue_test.cc)
+add_executable(map_test stl/map_test.cc)
 
+add_subdirectory(tree)
