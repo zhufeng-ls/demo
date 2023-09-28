@@ -1,0 +1,1 @@
+add_executable(default_move_ctor_test default_move_ctor_test.cc)

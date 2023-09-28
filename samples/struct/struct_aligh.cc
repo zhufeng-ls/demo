@@ -16,6 +16,13 @@ struct S3
     int i;
 };
 
+struct S3_1
+{
+    char c;
+    double d;
+    int i;
+};
+
 struct S4
 {
     char c[2];
@@ -62,6 +69,17 @@ struct S6
     short c;
 };
 
+struct gdt_entry
+{
+    uint16_t limit_low;
+    uint16_t base_low;
+    uint8_t base_middle;
+    uint8_t access;
+    unsigned char limit_high : 4;
+    unsigned char flags : 4;
+    uint8_t base_high;
+} __attribute__((packed));
+
 int main()
 {
     std::cout << "int: " << sizeof(int) << endl;
@@ -70,6 +88,7 @@ int main()
 
     std::cout << "S2: " << sizeof(S2) << endl;
     std::cout << "S3: " << sizeof(S3) << endl;
+    std::cout << "S3_1: " << sizeof(S3_1) << endl;
     std::cout << "S4: " << sizeof(S4) << endl;
     std::cout << "S4_1: " << sizeof(S4_1) << endl;
     std::cout << "S4_2: " << sizeof(S4_2) << endl;
@@ -77,4 +96,5 @@ int main()
     std::cout << "S4_4: " << sizeof(S4_4) << endl;
     std::cout << "S5: " << sizeof(S5) << endl;
     std::cout << "S6: " << sizeof(S6) << endl;
+    std::cout << "gdt_entry: " << sizeof(gdt_entry) << endl;
 }

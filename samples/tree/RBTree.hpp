@@ -430,6 +430,7 @@ void RBTree<T>::insertFixUp(RBTNode<T> *&root, RBTNode<T> *node)
     RBTNode<T> *parent, *gparent;
 
     // 若“父节点存在，并且父节点的颜色是红色”
+    // 因为当前节点总是红色，若父节点是红色，则说明修正完成了。
     while ((parent = rb_parent(node)) && rb_is_red(parent))
     {
         gparent = rb_parent(parent);
@@ -438,6 +439,7 @@ void RBTree<T>::insertFixUp(RBTNode<T> *&root, RBTNode<T> *node)
         if (parent == gparent->left)
         {
             // Case 1条件：叔叔节点是红色
+            // 当父和叔节点是红色的时候，只需要依次向上做颜色的变换，无需左旋和右旋
             {
                 RBTNode<T> *uncle = gparent->right;
                 if (uncle && rb_is_red(uncle))
@@ -704,6 +706,7 @@ template <class T> void RBTree<T>::remove(RBTNode<T> *&root, RBTNode<T> *node)
         color = rb_color(replace);
 
         // "被删除节点"是"它的后继节点的父节点"
+        // 即它的后继节点是它的右子节点
         if (parent == node)
         {
             parent = replace;
@@ -712,8 +715,9 @@ template <class T> void RBTree<T>::remove(RBTNode<T> *&root, RBTNode<T> *node)
         {
             // child不为空
             if (child) rb_set_parent(child, parent);
+            // child 要么为右子树，要么就不存在
             parent->left = child;
-
+            // 当 node 的右子树为 replace 时，replace 依然是连续的。
             replace->right = node->right;
             rb_set_parent(node->right, replace);
         }
@@ -723,6 +727,7 @@ template <class T> void RBTree<T>::remove(RBTNode<T> *&root, RBTNode<T> *node)
         replace->left = node->left;
         node->left->parent = replace;
 
+        // 删除黑色节点，树就不平衡了，因此需要重新变换。
         if (color == BLACK) removeFixUp(root, child, parent);
 
         delete node;

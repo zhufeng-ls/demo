@@ -36,4 +36,11 @@ add_subdirectory(maidian)
 
 add_executable(struct_aligh struct/struct_aligh.cc)
 
+add_subdirectory(threadpool)
+
+add_subdirectory(leetcode)
+
+add_subdirectory(c++)
+
+add_subdirectory(zhao)
 
